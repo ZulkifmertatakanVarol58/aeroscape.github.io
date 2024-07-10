@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>Concepts Aérospatiaux - Aeroscape</title>
+<link rel="stylesheet" href="styles/styles.css">
+  
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logo">AÉROSCAPE<img src="picture/unnamed.jpg" style="max-width:15%;height:auto;"></div>
+        <div class="subscribe-button" onclick="toggleSubscribeForm()"><a href="index1.html">S'abonner</a></div>
+    </div>
+
+    <div class="dropdown" id="menuDropdown">
+        <a href="index1.html">Accueil</a>
+        <a href="aérospatiale.html">Aérospatial</a>
+        <button onclick="toggleContrast()">Contraste Élevé</button>
+    </div>
+<div id="google_translate_element"></div>
+    </div>
+
+   
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en,fr,es,de,it,pt,ru,zh-CN,ja,ko',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+   
+    <div class="content">
+        <h1>Concepts Aérospatiaux</h1>
+        <div class="article">
+            <h2>Les Satellites</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/AEHF_1.jpg" alt="Satellite">
+            <p>Les satellites sont des objets placés en orbite autour de la Terre ou d'un autre corps céleste. Ils sont utilisés pour les communications, l'observation de la Terre, la navigation et bien d'autres applications.</p>
+            <div class="links">
+                <a href="savoirsat.html">En savoir plus sur les satellites</a>
+                <a href="difsat.html">Les différents types de satellites</a>
+                <a href="appsat.html">Applications des satellites</a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="subscribe-form-container" id="subscribeForm">
+        <h2>S'abonner à notre newsletter</h2>
+        <form class="subscribe-form">
+            <input type="email" placeholder="Votre email">
+            <button type="submit">S'abonner</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="footer-title">Suivez-nous</div>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter"></a>
+            <a href="#" class="social-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram"></a>
+        </div>
+    </div>
+
+    <div class="cookie-banner" id="cookieBanner">
+       <hr> <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer sur ce site, vous acceptez notre utilisation des cookies.</p><hr>
+        
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menuDropdown = document.getElementById('menuDropdown');
+            menuDropdown.style.display = menuDropdown.style.display === 'block' ? 'none' : 'block';
+            var menuIcon = document.querySelector('.menu-icon');
+            menuIcon.classList.toggle('active');
+        }
+
+        function toggleSubscribeForm() {
+            var subscribeForm = document.getElementById('subscribeForm');
+            subscribeForm.style.display = subscribeForm.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+
+        function acceptCookies() {
+            var cookieBanner = document.getElementById('cookieBanner');
+            cookieBanner.style.display = 'none';
+        }
+function toggleForm() {
+            const formContainer = document.getElementById('subscribeFormContainer');
+            formContainer.style.display = formContainer.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function subscribe(event) {
+            event.preventDefault();
+            alert('Merci pour votre abonnement !');
+            toggleForm();
+        }
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && (event.key === '=' || event.key === '-' || event.key === '0')) {
+        event.preventDefault();
+    }
+});
+
+document.addEventListener('wheel', function(event) {
+    if (event.ctrlKey) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
+document.addEventListener('gesturestart', function(event) {
+    event.preventDefault();
+});
+
+document.addEventListener('gesturechange', function(event) {
+    event.preventDefault();
+});
+
+document.addEventListener('gestureend', function(event) {
+    event.preventDefault();
+});
+    </script>
+
+    <style>
+        .high-contrast {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</body>
+
+</html>
